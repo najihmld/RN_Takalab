@@ -16,7 +16,8 @@ export default function App() {
         <Stack.Screen
           options={{headerShown: false}}
           name="Home"
-          component={Home} />
+          component={Home}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -26,7 +27,17 @@ function Home() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Intro" component={Intro} />
-      <Stack.Screen name="DatePicker" component={DatePicker} />
+      <Stack.Screen
+        options={{
+          title: 'Pick a Time',
+          headerTransparent: true,
+          headerStyle: {
+            backgroundColor: 'transparent',
+          },
+        }}
+        name="DatePicker"
+        component={DatePicker}
+      />
       <Stack.Screen name="Location" component={Location} />
     </Stack.Navigator>
   );
