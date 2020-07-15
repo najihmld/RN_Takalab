@@ -49,15 +49,15 @@ const DatePicker = (props) => {
             keyExtractor={(item) => item.id}
             renderItem={({item, index}) => {
               return (
-                <TouchableOpacity onPress={() => pickADate(item)}>
-                  <View style={styles.listDate}>
+                <View style={styles.listDate}>
+                  <TouchableOpacity onPress={() => pickADate(item)}>
                     {dateSelected.id === item.id ? (
                       <Text style={styles.textDateSelected}>{item.date}</Text>
                     ) : (
                       <Text style={styles.textDate}>{item.date}</Text>
                     )}
-                  </View>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                </View>
               );
             }}
           />
