@@ -30,6 +30,7 @@ function Home() {
       <Stack.Screen
         options={{
           title: 'Pick a Time',
+          headerTintColor: 'white',
           headerTransparent: true,
           headerStyle: {
             backgroundColor: 'transparent',

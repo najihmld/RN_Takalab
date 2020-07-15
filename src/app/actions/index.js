@@ -33,7 +33,7 @@ export const getListDate = () => {
     setTimeout(() => {
       let cal = [];
       for (let i = 1; i <= 29; i++) {
-        let id = Math.random().toString(36).substr(2, 5);
+        let id = i;
         let ddd = moment().add(i, 'days').format('ddd');
         let MMMDD = moment().add(i, 'days').format('MMM DD');
         let setData = {id, date: `${ddd}\n${MMMDD}`};
