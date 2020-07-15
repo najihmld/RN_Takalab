@@ -79,7 +79,10 @@ const DatePicker = (props) => {
                       style={styles.toSelected}>
                       {timeSelected.id === item.id ? (
                         <View style={styles.selected}>
-                          <Text>{`${timeSelected.time} - ${timeSelected.until}`}</Text>
+                          <Text
+                            style={
+                              styles.textDateSelected
+                            }>{`${timeSelected.time} - ${timeSelected.until}`}</Text>
                         </View>
                       ) : null}
                     </TouchableOpacity>
@@ -90,7 +93,14 @@ const DatePicker = (props) => {
           }}
         />
       </View>
-      <Button title="Location" onPress={() => toLocation()} />
+      <Button
+        buttonStyle={{
+          backgroundColor: '#008080',
+          margin: 10,
+        }}
+        title="Location"
+        onPress={() => toLocation()}
+      />
     </View>
   );
 };
@@ -98,11 +108,11 @@ const DatePicker = (props) => {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#f6f8fa',
+    backgroundColor: '#ffffff',
   },
   conHeader: {
     flex: 0.2,
-    backgroundColor: 'red',
+    backgroundColor: '#008080',
   },
   header: {
     height: 55,
@@ -112,14 +122,14 @@ const styles = StyleSheet.create({
   },
   main: {
     flex: 0.8,
-    backgroundColor: 'yellow',
+    backgroundColor: '#ffffff',
   },
   listDate: {
     padding: 10,
     width: 100,
     alignContent: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: 'blue',
+    backgroundColor: 'transparent',
     flexDirection: 'row',
   },
   textDate: {
@@ -130,7 +140,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   listTime: {
-    backgroundColor: 'orange',
+    backgroundColor: '#ffffff',
     height: 80,
     alignContent: 'center',
     justifyContent: 'flex-start',
@@ -151,16 +161,19 @@ const styles = StyleSheet.create({
   toSelected: {
     paddingRight: 10,
     backgroundColor: 'transparent',
-    height: 70,
+    height: 80,
     justifyContent: 'center',
   },
   selected: {
-    backgroundColor: 'yellow',
-    paddingTop: 10,
-    paddingBottom: 10,
+    backgroundColor: '#008080',
+    padding: 10,
     height: 46,
+    opacity: 0.7,
     borderRadius: 10 / 2,
     justifyContent: 'center',
+  },
+  button: {
+    backgroundColor: '#008080',
   },
 });
 

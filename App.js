@@ -26,7 +26,11 @@ export default function App() {
 function Home() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Intro" component={Intro} />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="Intro"
+        component={Intro}
+      />
       <Stack.Screen
         options={{
           title: 'Pick a Time',
@@ -39,7 +43,16 @@ function Home() {
         name="DatePicker"
         component={DatePicker}
       />
-      <Stack.Screen name="Location" component={Location} />
+      <Stack.Screen
+        options={{
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: '#008080',
+          },
+        }}
+        name="Location"
+        component={Location}
+      />
     </Stack.Navigator>
   );
 }

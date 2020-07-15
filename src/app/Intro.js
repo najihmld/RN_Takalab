@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
 
 const Intro = (props) => {
@@ -7,11 +7,29 @@ const Intro = (props) => {
     props.navigation.navigate('DatePicker');
   };
   return (
-    <View>
-      <Text>Intro</Text>
-      <Button title="Set Date" onPress={() => toDatePicker()} />
-    </View>
+    <>
+      <View styles={styles.screen} />
+      <View style={styles.main} />
+      <Button
+        buttonStyle={{
+          backgroundColor: '#008080',
+          margin: 10,
+        }}
+        title="Click Me"
+        onPress={() => toDatePicker()}
+      />
+    </>
   );
 };
+
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  main: {
+    flex: 0.45,
+  },
+});
 
 export default Intro;

@@ -29,7 +29,7 @@ const Location = () => {
             {latitude: -7.1586521, longitude: 112.7880093},
             {latitude: -7.1587044, longitude: 112.7938538},
           ]}
-          strokeColor="#000"
+          strokeColor="#008080"
           strokeWidth={6}
         />
       </MapView>
@@ -45,10 +45,6 @@ const styles = StyleSheet.create({
   },
   map: {
     ...StyleSheet.absoluteFillObject,
-  },
-  icon: {
-    height: 30,
-    width: 30,
   },
 });
 
